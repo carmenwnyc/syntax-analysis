@@ -1,0 +1,8 @@
+Author: Carmen Wu
+UNI: jw3513
+Date: 10/13/2020
+PLT Project 2.2
+
+The output contains a tree structure, in which each row represent a node in the tree. For each node, the name of the statement, the memory location, the location of the statement in the source code, the type of the data represented.
+
+The most interesting thing I find about the AST dump is that the source code of examples/gcd.c is organized as one root node that has three children. Inside the source code, the body of the function is simplified as three main parts (children nodes): two parameter declaration statements and a compound statement (if-else statement). Such simplification makes implementation to traverse and work with the AST tree easier.
