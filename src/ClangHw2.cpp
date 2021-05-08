@@ -1,5 +1,6 @@
 //
-// Created by Saikat Chakraborty on 9/24/20.
+// Template originally provided by Saikat Chakraborty on 9/24/2020.
+// Functions isRecursiveFunction() and formatFunctionCalls() written by Carmen Wu
 //
 
 #include "hw2_util.h"
@@ -53,7 +54,7 @@ public:
     }
 
     bool isRecursiveFunction(FunctionDecl *function, Stmt *stmt) {
-        // TODO Implement this function.
+        // Author: Carmen Wu
 
         std::string functionName = function->getNameInfo().getName().getAsString();
 
@@ -96,7 +97,7 @@ public:
 
     std::string formatFunctionCall(CallExpr *callExpr) {
         std::string formattedExpr = "";
-        // TODO: implement the reformat call expression extra credit.
+        // Author: Warmen Wu
         assert(isa<CallExpr>(callExpr)); //abort program if callExpr is not CallExpr
 
         Expr *callee = callExpr->getCallee();
@@ -137,7 +138,7 @@ public:
         // We are doing a DFS on the input AST.
         // Whenever we find an AST node of type "CallExpr",
         // We reformat corresponding sub-tree.
-        // NOTE: Please DO NOT modify the logic of this function.
+
         std::stack<Stmt *> stack;
         stack.push(root);
         while (!stack.empty()) {
